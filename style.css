@@ -1,0 +1,81 @@
+
+
+body
+ {
+  
+background-color:hsl(257, 40%, 49%);
+display: flex;
+
+flex-wrap: wrap;
+ }
+
+ .logo {
+    
+  }
+  
+
+
+ body {
+display: flex;
+justify-content: center;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items:ccenter;er;
+    width: 50%;   
+  }
+  }
+
+
+/* TODO:make the the pic and h1 to right and make responsive design */
+
+
+    .button {
+        background-color: white;
+        border: none;
+        border-radius: 50%;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor:grab	;
+
+      
+
+}
+
+button:hover {
+    cursor: pointer;
+  }
+
+  .attribution{
+
+  }
+
+  footer {
+    margin-top: auto;
+    
+padding: 1rem;
+text-align: center;
+justify-content: center;
+
+  }
+
+  /* Add media queries for responsive design */
+@media (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+    .right {
+      align-items: center;
+      width: 100%;
+    }
+    .illustration-mockups {
+      width: 100%;
+    }
+  }
