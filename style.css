@@ -1,81 +1,172 @@
-
-
-body
- {
-  
-background-color:hsl(257, 40%, 49%);
-display: flex;
-
-flex-wrap: wrap;
- }
-
- .logo {
-    
-  }
-  
-
-
- body {
-display: flex;
-justify-content: center;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: hsl(257, 40%, 49%);
 }
 
-.right {
-    display: flex;
-    flex-direction: column;
-    align-items:ccenter;er;
-    width: 50%;   
-  }
-  }
-
-
-/* TODO:make the the pic and h1 to right and make responsive design */
-
-
-    .button {
-        background-color: white;
-        border: none;
-        border-radius: 50%;
-        color: black;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor:grab	;
-
-      
-
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  flex: 1;
 }
 
-button:hover {
-    cursor: pointer;
+.left-section,
+.right-section {
+  width: 100%;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.illustration-mockups {
+  width: 80%;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.right-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.right-section p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  background-color: #ff0099;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ff66b2;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f8f8f8;
+}
+
+footer .attribution {
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: #ff0099;
+  text-decoration: none;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Space between icons */
+  margin-top: 1rem;
+}
+
+footer .social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #ff0099;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  background-color: #ff66b2;
+}
+
+footer .social-icons i {
+  font-size: 1.25rem;
+}
+
+/* Add this to your style.css file */
+
+/* For mobile devices */
+.bg-curvy-desktop {
+  display: none;
+}
+
+.bg-curvy-mobile {
+  width: 100%;
+  height: auto;
+}
+
+/* For desktop devices */
+@media (min-width: 768px) {
+  .bg-curvy-mobile {
+    display: none;
   }
 
-  .attribution{
+  .bg-curvy-desktop {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
 
+/* Responsive Design */
+@media (min-width: 768px) {
+  .content-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 
-  footer {
-    margin-top: auto;
-    
-padding: 1rem;
-text-align: center;
-justify-content: center;
-
+  .left-section,
+  .right-section {
+    width: 45%;
+    text-align: left;
   }
 
-  /* Add media queries for responsive design */
+  .illustration-mockups {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .right-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .right-section p {
+    font-size: 1.25rem;
+  }
+}
+
 @media (max-width: 768px) {
-    body {
-      flex-direction: column;
-    }
-    .right {
-      align-items: center;
-      width: 100%;
-    }
-    .illustration-mockups {
-      width: 100%;
-    }
+  body {
+    flex-direction: column;
   }
+  .right {
+    align-items: center;
+    width: 100%;
+  }
+  .illustration-mockups {
+    width: 100%;
+  }
+}
